@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: lifehub_postgres
+    environment:
+      POSTGRES_DB: lifehub_dev
+      POSTGRES_USER: lifehub
+      POSTGRES_PASSWORD: lifehub_dev_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lifehub -d lifehub_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  adminer:
+    image: adminer:latest
+    container_name: lifehub_adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
