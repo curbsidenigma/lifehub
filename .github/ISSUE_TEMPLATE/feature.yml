@@ -1,0 +1,46 @@
+name: Feature
+description: Proponer una nueva funcionalidad alineada al roadmap.
+title: "feat: "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de abrir, verifica que la feature está dentro del scope de la fase actual
+        (`docs/roadmap.md`). Si no lo está, va al parking lot en `docs/progress.md`,
+        no a una issue.
+
+  - type: input
+    id: phase
+    attributes:
+      label: Fase / Semana
+      description: A qué fase del roadmap pertenece.
+      placeholder: "Fase 1, Semana 2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivación
+      description: Por qué se necesita. Qué problema resuelve.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: Lista verificable de cosas que deben ser ciertas para cerrar esta issue.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notas técnicas
+      description: Decisiones, trade-offs, dependencias relevantes. Opcional.

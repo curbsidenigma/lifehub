@@ -1,0 +1,20 @@
+# Controla el menú de "New issue" en github.com/<owner>/<repo>/issues/new/choose
+#
+# blank_issues_enabled=false fuerza a usar un template (feature/bug/adr).
+# Esto es deliberado: prevenir issues sin estructura desde el día 1.
+blank_issues_enabled: false
+
+# Links externos que aparecen abajo de los templates en el menú "New issue".
+# Útil para redirigir a docs en vez de abrir issues que ya están respondidas.
+contact_links:
+  - name: Roadmap del proyecto
+    url: https://github.com/curbsidenigma/lifehub/blob/main/docs/roadmap.md
+    about: Antes de proponer una feature grande, valida si encaja en la fase actual.
+
+  - name: Bitácora de progreso
+    url: https://github.com/curbsidenigma/lifehub/blob/main/docs/progress.md
+    about: Estado actual y parking lot. Si tu idea ya está en el parking, súmate ahí.
+
+  - name: Convenciones del proyecto
+    url: https://github.com/curbsidenigma/lifehub/blob/main/CLAUDE.md
+    about: Naming, stack, anti-patrones. Lee antes de proponer cambios estructurales.

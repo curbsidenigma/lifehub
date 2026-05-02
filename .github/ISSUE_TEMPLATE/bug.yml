@@ -1,0 +1,45 @@
+name: Bug
+description: Algo no funciona como debería.
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Qué pasó
+      description: Comportamiento observado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Qué se esperaba
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Pasos para reproducir
+      description: Lo más concreto posible. Comandos exactos, datos de entrada.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: Entorno
+      description: OS, versión de Docker/Python/Node si es relevante.
+      placeholder: "Ubuntu 24.04, Docker 27, Python 3.12"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / stack trace
+      description: Pegar tal cual; se renderiza como bloque de código.
+      render: shell
