@@ -1,0 +1,63 @@
+name: ADR proposal
+description: Proponer una decisión arquitectónica grande que merece registro permanente.
+title: "ADR: "
+labels: ["adr", "decision"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Una **ADR** (Architecture Decision Record) registra UNA decisión grande
+        con contexto, opciones consideradas y razones. Vive permanentemente en
+        `docs/adr/NNNN-titulo.md` una vez aceptada.
+
+        Si la decisión es chica o reversible, probablemente no merece ADR — usa
+        "Feature" o "Bug" en su lugar.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: Qué situación motivó la decisión. Qué se intentó antes (si aplica).
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Opciones consideradas
+      description: Lista las alternativas reales con pros/cons. Mínimo 2.
+      value: |
+        ### Opción A — <nombre>
+        - Pro:
+        - Con:
+
+        ### Opción B — <nombre>
+        - Pro:
+        - Con:
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decisión propuesta
+      description: Qué se elige y por qué. Sé directo.
+    validations:
+      required: true
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consecuencias
+      description: Positivas, negativas, neutras. Especialmente las negativas — un ADR honesto las nombra.
+      value: |
+        ### Positivas
+        -
+
+        ### Negativas
+        -
+
+        ### Neutras
+        -
+    validations:
+      required: true
